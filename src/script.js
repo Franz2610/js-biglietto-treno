@@ -47,7 +47,7 @@ if (etaUtente < 18 ) {
     ${sconto} ${kmUtente * num * 0.20} € 
 </h1>
 <h1>
-    ${tot}    ${(prezzo.toFixed(2)) * 0.80}
+    ${tot}    ${(prezzo * 0.80).toFixed(2)}
 </h1>
 `;
 } 
@@ -61,7 +61,7 @@ if (etaUtente > 65 ) {
     ${sconto} ${kmUtente * num * 0.40} € 
 </h1>
 <h1>
-    ${tot}    ${(prezzo.toFixed(2)) * 0.60}
+    ${tot}    ${(prezzo * 0.60).toFixed(2)}
 </h1>
 `;
 }
