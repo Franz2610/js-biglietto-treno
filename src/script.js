@@ -22,11 +22,46 @@ const num = 0.21;
 
 console.log(etaUtente + kmUtente + num );
 
+//messaggio 
+let messaggio = 'Il prezzo del biglietto è :';
+let sconto = 'Con uno sconto di : '
+let tot = 'Il totale sarà di : '
 
 document.getElementById('treno').innerHTML=
 `
-<h1> ${kmUtente * num} € </h1>
+<h1>${messaggio} ${kmUtente * num} € </h1>
+`;
+
+if (etaUtente < 18 ) {
+    document.getElementById('treno').innerHTML=
 `
+<h1>
+    ${messaggio} ${kmUtente * num} € 
+</h1>
+<h1>
+    ${sconto} ${kmUtente * num * 0.20} € 
+</h1>
+<h1>
+    ${tot}    ${kmUtente * num * 0.80}
+</h1>
+`;
+} if (etaUtente > 65 ) {
+    document.getElementById('treno').innerHTML=
+`
+<h1>
+    ${messaggio} ${kmUtente * num} € 
+</h1>
+<h1>
+    ${sconto} ${kmUtente * num * 0.40} € 
+</h1>
+<h1>
+    ${tot}    ${kmUtente * num * 0.60}
+</h1>
+`;
+}
+
+
+
 
 
 
