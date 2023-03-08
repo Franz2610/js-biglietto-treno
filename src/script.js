@@ -56,13 +56,13 @@ if (etaUtente > 65 ) {
 `
 <h1>
     ${messaggio} ${kmUtente * num} € 
-</h1>;
+</h1>
 <h1>
     ${sconto} ${kmUtente * num * 0.40} € 
-</h1>;
+</h1>
 <h1>
     ${tot}    ${(prezzo * 0.60).toFixed(2)}
-</h1>;
+</h1>
 `;
 }
 
