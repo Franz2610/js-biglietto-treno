@@ -21,14 +21,14 @@ const etaUtente = prompt('Inserisci la tua età');
 const num = 0.21;
 
 // prezzo
-const prezzo = kmUtente * num
+const prezzo = kmUtente * num;
 
 console.log(etaUtente + kmUtente + num );
 
 //messaggio 
 let messaggio = 'Il prezzo del biglietto è :';
-let sconto = 'Con uno sconto di : '
-let tot = 'Il totale sarà di : '
+let sconto = 'Con uno sconto di : ';
+let tot = 'Il totale sarà di : ';
 
 
 
@@ -42,13 +42,13 @@ if (etaUtente < 18 ) {
 `
 <h1>
     ${messaggio} ${prezzo} € 
-</h1>
+</h1>;
 <h1>
     ${sconto} ${kmUtente * num * 0.20} € 
-</h1>
+</h1>;
 <h1>
     ${tot}    ${(prezzo * 0.80).toFixed(2)}
-</h1>
+</h1>;
 `;
 } 
 if (etaUtente > 65 ) {
@@ -56,13 +56,13 @@ if (etaUtente > 65 ) {
 `
 <h1>
     ${messaggio} ${kmUtente * num} € 
-</h1>
+</h1>;
 <h1>
     ${sconto} ${kmUtente * num * 0.40} € 
-</h1>
+</h1>;
 <h1>
     ${tot}    ${(prezzo * 0.60).toFixed(2)}
-</h1>
+</h1>;
 `;
 }
 
