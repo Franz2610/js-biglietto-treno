@@ -27,9 +27,11 @@ let messaggio = 'Il prezzo del biglietto è :';
 let sconto = 'Con uno sconto di : '
 let tot = 'Il totale sarà di : '
 
+
+
 document.getElementById('treno').innerHTML=
 `
-<h1>${messaggio} ${kmUtente * num} € </h1>
+<h1>${messaggio} ${Math.round(((kmUtente*num)*100.0)/100.0)} € </h1>
 `;
 
 if (etaUtente < 18 ) {
@@ -45,7 +47,8 @@ if (etaUtente < 18 ) {
     ${tot}    ${kmUtente * num * 0.80}
 </h1>
 `;
-} if (etaUtente > 65 ) {
+} 
+if (etaUtente > 65 ) {
     document.getElementById('treno').innerHTML=
 `
 <h1>
