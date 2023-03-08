@@ -20,6 +20,9 @@ const etaUtente = prompt('Inserisci la tua età');
 // costante prezzo per km
 const num = 0.21;
 
+// prezzo
+const prezzo = kmUtente * num
+
 console.log(etaUtente + kmUtente + num );
 
 //messaggio 
@@ -31,20 +34,20 @@ let tot = 'Il totale sarà di : '
 
 document.getElementById('treno').innerHTML=
 `
-<h1>${messaggio} ${Math.round(((kmUtente*num)*100.0)/100.0)} € </h1>
+<h1>${messaggio} ${prezzo.toFixed(2)} € </h1>
 `;
 
 if (etaUtente < 18 ) {
     document.getElementById('treno').innerHTML=
 `
 <h1>
-    ${messaggio} ${kmUtente * num} € 
+    ${messaggio} ${prezzo} € 
 </h1>
 <h1>
     ${sconto} ${kmUtente * num * 0.20} € 
 </h1>
 <h1>
-    ${tot}    ${kmUtente * num * 0.80}
+    ${tot}    ${(prezzo.toFixed(2)) * 0.80}
 </h1>
 `;
 } 
@@ -58,7 +61,7 @@ if (etaUtente > 65 ) {
     ${sconto} ${kmUtente * num * 0.40} € 
 </h1>
 <h1>
-    ${tot}    ${kmUtente * num * 0.60}
+    ${tot}    ${(prezzo.toFixed(2)) * 0.60}
 </h1>
 `;
 }
